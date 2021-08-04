@@ -1,0 +1,103 @@
+
+<!-- // crreating Helloworld using react and react dom -->
+<!-- <body>
+   <div id="root"></div>
+
+  🐨 add React and ReactDOM on the page.
+       💰 Here are script tags that'll do the job: -->
+   <!-- <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
+   -->
+
+  <!-- <script type="module">
+    const rootElement = document.getElementById('root')
+
+    // You're going to re-implement this code using React!
+
+    // These three lines are similar to React.createElement. // Implement these three lines using React.
+   const Elementtype = 'h1'
+   const props = { className: 'container', children:'Helloworld'}
+
+   const reactElement = React.createElement(Elementtype , props)
+
+   ReactDOM.render(reactElement, rootElement)
+    
+    // const element = document.createElement('div')
+    // element.textContent = 'Hello World' // 💰 in React, you set this with the "children" prop
+    // element.className = 'container' // 💰 in React, this is also called the "className" prop
+
+    // This is similar to ReactDOM.render
+    // rootElement.append(element)
+
+  </script> -->
+<!-- </body>   -->
+
+
+<!-- creating hello world using jsx -->
+
+<!-- 
+<body>
+  <div id="root"></div> -->
+  <!-- <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
+
+  💣 remove this line
+  <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
+  💣 remove this line
+
+   <script type="text/babel"> -->
+    <!-- // 🐨 on the script tag above, change `type="module"`
+    // to `type="text/babel"` so babel will compile this code for the browser to run.
+
+    // 🐨 re-implement this using JSX!
+
+    const children = 'HelloWorld'
+    const className = 'container'
+    const props = {children , className}
+     const element = <div {...props} /> 
+    // const element = React.createElement('div', {
+    //   className: 'container',
+    //   children: 'Hello World',
+    // })
+
+    // 💰 there are a few subtle differences between JSX and HTML. One such
+    // difference is how you apply a class to an element in JSX is by using
+    // `className` rather than `class`!
+    // 📜 You can learn the differences between JSX and HTML syntax from the React docs here:
+    // // https://reactjs.org/docs/dom-elements.html#differences-in-attributes
+
+    ReactDOM.render(element, document.getElementById('root'))
+  </script> -->
+<!-- </body> --> 
+
+
+<!-- Creating component  -->
+
+  
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
+    <script type="text/babel">
+      // 🐨 Make a function called `message` which returns the JSX we want to share
+       function Message({children}){
+         return <div className='message'>{children}</div>
+  
+      }
+  
+      // 🐨 use that function in place of the divs below with:
+      // 💰 {message({children: 'Hello World'})} {message({children: 'Goodbye World'})}
+  
+      const element = (
+        <>
+          <Message>HelloWorld</Message>
+           <Message>Goodbye World</Message>
+  
+        </>
+      )
+  
+      // 💯 This is only the first step to making actual React components. The rest is in the extra credit!
+      ReactDOM.render(element, document.getElementById('root'))
+    </script>
+  </body>
